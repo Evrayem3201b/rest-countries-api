@@ -7,13 +7,6 @@ async function fetchData(){
     return await res.json()
 }
 
-export async function generateStaticParams(){
-    const countries = await fetch("https://restcountries.com/v3.1/all").then(res => { return res.json() })
-    return countries.map(country => ({
-        id: country.id
-    }))
-}
-
 export default async function Page({ params }) {
     const data = await fetchData()
     const countryIndex = params.id;
