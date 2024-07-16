@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "nunito";
+    src: url(/fonts/nunito.ttf);
+}
+
+.hide{
+    display: none;
+}
+.show{
+    display: flex;
+}
+
+@layer utilities {
+    .country-container{
+        @apply flex flex-col gap-2 bg-[#202c37] shadow-lg rounded-bl-lg rounded-br-lg;
+    }
+}
